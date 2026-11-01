@@ -248,50 +248,45 @@ p {
 /* ------------------------------------------------------------------
    Hero
    ------------------------------------------------------------------ */
-/* The image half runs to the page edge; the text half lines up with the 1400px container */
 .hero {
+  background: var(--background);
+}
+
+/* Text and image share the 1400px container, split into two equal halves */
+.hero__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   min-height: clamp(520px, 41.5vw, 640px);
-  background: var(--background);
 }
 
 .hero__content {
   position: relative;
   overflow: hidden;
   display: flex;
-  justify-content: flex-end;
-}
-
-.hero__inner {
-  position: relative;
-  width: 100%;
-  max-width: calc(var(--container) / 2);
-  padding-left: var(--gutter);
-  display: flex;
   align-items: center;
 }
 
-.hero__inner .swirl {
+.hero__content .swirl {
   height: 94%;
   width: auto;
-  max-width: calc(100% - var(--gutter));
-  left: calc(var(--gutter) + 0.5%);
+  max-width: 96%;
+  left: 0.5%;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.hero__text {
+.hero__inner {
   position: relative;
   z-index: 1;
+  width: 100%;
   padding: 4rem 3rem 4rem 0;
 }
 
-.hero__text .heading {
+.hero__inner .heading {
   margin-bottom: 2.6rem;
 }
 
-.hero__text .btn {
+.hero__inner .btn {
   margin-top: 3.8rem;
 }
 
@@ -440,7 +435,7 @@ p {
 .parts {
   background: var(--foreground);
   color: var(--white);
-  padding: 2.2rem 0;
+  padding: 1.6rem 0;
 }
 
 .parts__inner {
@@ -450,13 +445,15 @@ p {
   align-items: center;
 }
 
+/* The card fills the band's height, sitting close to its top and bottom edges */
 .parts__card {
   position: relative;
+  align-self: stretch;
+  min-height: 400px;
   background: var(--white);
   color: var(--black);
   border-radius: 42px;
   overflow: hidden;
-  aspect-ratio: 875 / 590;
 }
 
 .parts__card > img {
@@ -510,14 +507,23 @@ p {
 }
 
 .parts__copy {
+  container-type: inline-size;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-block: 1.4rem;
 }
 
-.parts__copy .heading {
-  font-size: clamp(1.6rem, 1rem + 1.35vw, 2.25rem);
+/* Two fixed lines, scaled to the column so neither line wraps */
+.parts__heading {
+  width: 100%;
+  font-size: min(2.25rem, 4.9cqi);
+}
+
+.parts__heading span {
+  display: block;
+  white-space: nowrap;
 }
 
 .parts__badge {
@@ -642,7 +648,7 @@ p {
     font-size: 1rem;
   }
 
-  .hero {
+  .hero__grid {
     grid-template-columns: 1fr;
     min-height: 0;
   }
@@ -650,11 +656,7 @@ p {
     order: -1;
     aspect-ratio: 4 / 3;
   }
-  .hero__inner {
-    max-width: none;
-    padding-inline: var(--gutter);
-  }
-  .hero__inner .swirl {
+  .hero__content .swirl {
     height: auto;
     width: 90%;
     max-width: none;
@@ -662,7 +664,7 @@ p {
   }
 
   /* Phones and tablets: centre headings, copy, buttons and tick lists */
-  .hero__text,
+  .hero__inner,
   .machines__intro,
   .trusted__copy {
     text-align: center;
@@ -677,10 +679,10 @@ p {
     width: 90%;
     left: -10%;
   }
-  .hero__text {
+  .hero__inner {
     padding: 3.5rem 0;
   }
-  .hero__text .btn {
+  .hero__inner .btn {
     margin-top: 2.5rem;
   }
 
@@ -705,6 +707,15 @@ p {
   }
   .parts__card {
     border-radius: 28px;
+    min-height: 0;
+    aspect-ratio: 875 / 590;
+  }
+  .parts__heading {
+    font-size: clamp(1.6rem, 1rem + 1.35vw, 2.25rem);
+  }
+  .parts__heading span {
+    display: inline;
+    white-space: normal;
   }
 }
 
