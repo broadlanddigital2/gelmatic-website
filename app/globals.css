@@ -256,7 +256,7 @@ p {
 .hero__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  min-height: clamp(520px, 41.5vw, 640px);
+  min-height: clamp(520px, 41.5vw, 604px);
 }
 
 .hero__content {
@@ -302,7 +302,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 62% center;
+  object-position: 25% center;
 }
 
 /* ------------------------------------------------------------------
