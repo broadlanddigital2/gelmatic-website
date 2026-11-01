@@ -69,6 +69,7 @@ export default function Home() {
       <main>
         {/* ---------------- Hero ---------------- */}
         <section className="hero">
+          <div className="container hero__grid">
           <div className="hero__content">
             <GelmaticMark className="swirl" />
             <div className="hero__inner">
@@ -93,8 +94,9 @@ export default function Home() {
               alt="Gelmatic soft serve machine with its touchscreen control panel"
               fill
               priority
-              sizes="(max-width: 960px) 100vw, 50vw"
+              sizes="(max-width: 960px) 100vw, 700px"
             />
+          </div>
           </div>
         </section>
 
@@ -191,8 +193,8 @@ export default function Home() {
 
         {/* ---------------- Trusted by ---------------- */}
         <section className="trusted">
-          <GelmaticMark className="swirl" />
           <div className="container trusted__inner">
+            <GelmaticMark className="swirl" />
             <div className="trusted__copy">
               <h2 className="heading">Trusted by Ice Cream Vans, Busy Parlours and Kiosks Throughout the UK</h2>
               <p className="copy">
