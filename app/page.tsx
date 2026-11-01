@@ -4,6 +4,7 @@ import { Arrow, GelmaticMark } from "@/components/Icons";
 
 const SHOP_URL = "https://icecreamvanspares.co.uk/shop";
 const MACHINES_URL = "https://icecreamvanspares.co.uk/gelmatic-machines";
+const PARTS_URL = "https://icecreamvanspares.co.uk/shop/gelmatic-machine-parts.html";
 
 const features = [
   { icon: "/images/icon-star.png", title: "Premium Quality", text: "Built in Italy, designed for professionals" },
@@ -189,7 +190,7 @@ export default function Home() {
                 Keep your Gelmatic Machines running at their best with genuine parts, expert advice and fast UK
                 delivery
               </p>
-              <a href={SHOP_URL} className="btn btn--compact">
+              <a href={PARTS_URL} className="btn btn--compact">
                 <Arrow direction="left" /> Explore Machine Parts
               </a>
             </div>
