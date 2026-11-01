@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Arrow, GelmaticMark } from "@/components/Icons";
 
+const SHOP_URL = "https://icecreamvanspares.co.uk/shop";
+const MACHINES_URL = "https://icecreamvanspares.co.uk/gelmatic-machines";
+
 const features = [
   { icon: "/images/icon-star.png", title: "Premium Quality", text: "Built in Italy, designed for professionals" },
   { icon: "/images/icon-snowflake.png", title: "Consistent Results", text: "Perfect texture and taste every time" },
@@ -15,21 +18,22 @@ const machines = [
     image: "/images/e-pronto.jpg",
     width: 248,
     height: 382,
-    href: "/machines/e-pronto-electric-van",
+    href: "https://icecreamvanspares.co.uk/gelmatic-machines/gelmatic-e-pronto-electric-van-machine",
   },
   {
     name: "Pronto - Matic Direct Drive Machine",
     image: "/images/pronto-matic.webp",
     width: 700,
     height: 1050,
-    href: "/machines/pronto-matic-direct-drive",
+    // TODO: no "Pronto-Matic Direct Drive" product on icecreamvanspares.co.uk yet; links to the range
+    href: "https://icecreamvanspares.co.uk/gelmatic-machines",
   },
   {
     name: "Pronto Electric Machine",
     image: "/images/pronto-electric.webp",
     width: 700,
     height: 1050,
-    href: "/machines/pronto-electric",
+    href: "https://icecreamvanspares.co.uk/gelmatic-machines/gelmatic-pronto-electric-machine",
   },
 ];
 
@@ -83,9 +87,9 @@ export default function Home() {
                   With Italian craftsmanship, specialised engineering and rapid, consistent performance, Gelmatic ice
                   cream machines are the investment you need for your business.
                 </p>
-                <Link href="/shop" className="btn">
+                <a href={SHOP_URL} className="btn">
                   Shop Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -126,15 +130,15 @@ export default function Home() {
               <p className="copy">
                 Offering a range of high standard, dependent machines perfect for any retail / business venture.
               </p>
-              <Link href="/machines" className="btn btn--compact">
+              <a href={MACHINES_URL} className="btn btn--compact">
                 Explore Our Machines <Arrow direction="right" />
-              </Link>
+              </a>
             </div>
 
             <ul className="machines__list">
               {machines.map((m) => (
                 <li key={m.name}>
-                  <Link href={m.href} className="machine-card">
+                  <a href={m.href} className="machine-card">
                     <div className="machine-card__frame">
                       <Image
                         src={m.image}
@@ -145,7 +149,7 @@ export default function Home() {
                       />
                     </div>
                     <h3 className="machine-card__name">{m.name}</h3>
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -185,9 +189,9 @@ export default function Home() {
                 Keep your Gelmatic Machines running at their best with genuine parts, expert advice and fast UK
                 delivery
               </p>
-              <Link href="/parts" className="btn btn--compact">
+              <a href={SHOP_URL} className="btn btn--compact">
                 <Arrow direction="left" /> Explore Machine Parts
-              </Link>
+              </a>
             </div>
           </div>
         </section>
