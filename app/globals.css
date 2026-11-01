@@ -27,7 +27,7 @@
 
   --container: 1400px; /* max-w-350 on the reference site */
   --gutter: clamp(16px, 4vw, 40px);
-  --header-rule: 6px;
+  --header-rule: 8px;
 
   --font-body: var(--font-franklin), "Franklin Gothic Book", "Libre Franklin", Arial, sans-serif;
   --font-heading: "Franklin Gothic ATF", var(--font-franklin), "Franklin Gothic Demi", "Libre Franklin",
@@ -91,7 +91,7 @@ p {
   font-weight: 700;
   letter-spacing: var(--tracking-heading);
   line-height: 1.15;
-  font-size: clamp(1.75rem, 1.1rem + 2.1vw, 2.75rem);
+  font-size: clamp(1.6rem, 1rem + 1.25vw, 2.125rem);
 }
 
 .copy {
@@ -187,7 +187,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 112px;
+  min-height: 92px;
 }
 
 .logo {
@@ -198,16 +198,16 @@ p {
 }
 
 .logo__mark {
-  width: 62px;
-  height: 62px;
+  width: 50px;
+  height: 50px;
   flex: none;
 }
 
 .logo__word {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: clamp(1.6rem, 1.1rem + 1.6vw, 3.1rem);
-  letter-spacing: 0.1em;
+  font-size: clamp(1.4rem, 1rem + 1.5vw, 2.375rem);
+  letter-spacing: 0.04em;
   line-height: 1;
 }
 
@@ -226,7 +226,7 @@ p {
 }
 
 .site-header__email {
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   letter-spacing: 0.1em;
   transition: color 0.25s ease;
 }
@@ -236,8 +236,8 @@ p {
 }
 
 .instagram {
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   display: block;
   object-fit: contain;
 }
@@ -253,7 +253,7 @@ p {
 .hero__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  min-height: 800px;
+  min-height: clamp(520px, 41.5vw, 640px);
 }
 
 .hero__content {
@@ -264,8 +264,10 @@ p {
 }
 
 .hero__content .swirl {
-  width: 92%;
-  left: 2%;
+  height: 94%;
+  width: auto;
+  max-width: 96%;
+  left: 0.5%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -507,7 +509,7 @@ p {
 }
 
 .parts__copy .heading {
-  font-size: clamp(1.75rem, 1.1rem + 2vw, 2.85rem);
+  font-size: clamp(1.6rem, 1rem + 1.35vw, 2.25rem);
 }
 
 .parts__badge {
@@ -622,11 +624,11 @@ p {
 
 @media (max-width: 960px) {
   .site-header__inner {
-    min-height: 84px;
+    min-height: 72px;
   }
   .logo__mark {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
   }
   .site-header__email {
     display: none;
@@ -641,7 +643,9 @@ p {
     aspect-ratio: 4 / 3;
   }
   .hero__content .swirl {
+    height: auto;
     width: 90%;
+    max-width: none;
     left: 5%;
   }
   .trusted .swirl {
