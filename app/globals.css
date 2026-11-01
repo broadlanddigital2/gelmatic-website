@@ -152,12 +152,22 @@ p {
   object-fit: contain;
 }
 
+/* Gelmatic swirl mark: the logo PNG used as a mask, painted in currentColor */
+.gm-swirl {
+  display: inline-block;
+  aspect-ratio: 757 / 755;
+  background-color: currentColor;
+  -webkit-mask: url("/images/gelmatic-swirl.png") center / contain no-repeat;
+  mask: url("/images/gelmatic-swirl.png") center / contain no-repeat;
+}
+
 /* Big decorative Gelmatic swirl in the background */
 .swirl {
   position: absolute;
   pointer-events: none;
   color: var(--swirl);
   z-index: 0;
+  height: auto;
 }
 
 /* ------------------------------------------------------------------
@@ -250,9 +260,10 @@ p {
 }
 
 .hero__content .swirl {
-  width: 82%;
+  width: min(78%, 760px);
   left: 10%;
-  top: 4%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hero__inner {
@@ -438,11 +449,12 @@ p {
 
 .parts__card > img {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  left: 4%;
+  top: 9%;
+  width: 92%;
+  height: 87%;
   object-fit: contain;
-  object-position: 55% 100%;
+  object-position: 50% 100%;
 }
 
 .parts__brand {
@@ -455,12 +467,11 @@ p {
   gap: 0.6rem;
 }
 
-.parts__brand svg {
+.parts__brand .gm-swirl {
   width: clamp(56px, 7vw, 100px);
-  height: auto;
 }
 
-.parts__brand span {
+.parts__brand-word {
   font-family: var(--font-heading);
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -535,9 +546,9 @@ p {
 }
 
 .trusted .swirl {
-  width: 40%;
+  width: min(40%, 620px);
   left: 4%;
-  top: 0;
+  top: -1.5%;
 }
 
 .trusted__inner {
@@ -621,6 +632,14 @@ p {
     order: -1;
     aspect-ratio: 4 / 3;
   }
+  .hero__content .swirl {
+    width: 90%;
+    left: 5%;
+  }
+  .trusted .swirl {
+    width: 90%;
+    left: -10%;
+  }
   .hero__inner {
     max-width: none;
     padding: 3.5rem var(--gutter);
@@ -681,7 +700,7 @@ p {
   .feature__text {
     font-size: 0.9rem;
   }
-  .parts__brand span {
+  .parts__brand-word {
     display: none;
   }
   .parts__card {

@@ -70,7 +70,7 @@ export default function Home() {
         {/* ---------------- Hero ---------------- */}
         <section className="hero">
           <div className="hero__content">
-            <GelmaticMark className="swirl" weight={0.55} />
+            <GelmaticMark className="swirl" />
             <div className="hero__inner">
               <h1 className="heading">Gelmatic - An Investment to Enhance Your Business</h1>
               <p className="copy">
@@ -161,7 +161,7 @@ export default function Home() {
               />
               <div className="parts__brand" aria-hidden="true">
                 <GelmaticMark />
-                <span>
+                <span className="parts__brand-word">
                   GELMATIC<small>.CO.UK</small>
                 </span>
               </div>
@@ -191,7 +191,7 @@ export default function Home() {
 
         {/* ---------------- Trusted by ---------------- */}
         <section className="trusted">
-          <GelmaticMark className="swirl" weight={0.55} />
+          <GelmaticMark className="swirl" />
           <div className="container trusted__inner">
             <div className="trusted__copy">
               <h2 className="heading">Trusted by Ice Cream Vans, Busy Parlours and Kiosks Throughout the UK</h2>
