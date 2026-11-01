@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Arrow, GelmaticMark } from "@/components/Icons";
 
-const SHOP_URL = "https://icecreamvanspares.co.uk/shop";
 const MACHINES_URL = "https://icecreamvanspares.co.uk/gelmatic-machines";
 const PARTS_URL = "https://icecreamvanspares.co.uk/shop/gelmatic-machine-parts.html";
 
@@ -87,7 +86,7 @@ export default function Home() {
                   With Italian craftsmanship, specialised engineering and rapid, consistent performance, Gelmatic ice
                   cream machines are the investment you need for your business.
                 </p>
-                <a href={SHOP_URL} className="btn">
+                <a href={MACHINES_URL} className="btn">
                   Shop Now
                 </a>
               </div>
