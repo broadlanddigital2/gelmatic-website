@@ -26,8 +26,7 @@ const machines = [
     image: "/images/pronto-matic.webp",
     width: 700,
     height: 1050,
-    // TODO: no "Pronto-Matic Direct Drive" product on icecreamvanspares.co.uk yet; links to the range
-    href: "https://icecreamvanspares.co.uk/gelmatic-machines",
+    href: "https://icecreamvanspares.co.uk/gelmatic-machines/gelmatic-electric-hc-easy-1-pm-machine",
   },
   {
     name: "Pronto Electric Machine",
