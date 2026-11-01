@@ -69,22 +69,24 @@ export default function Home() {
       <main>
         {/* ---------------- Hero ---------------- */}
         <section className="hero">
-          <div className="container hero__grid">
           <div className="hero__content">
-            <GelmaticMark className="swirl" />
+            {/* Text column: aligned to the 1400px container; the image half runs to the page edge */}
             <div className="hero__inner">
-              <h1 className="heading">Gelmatic - An Investment to Enhance Your Business</h1>
-              <p className="copy">
-                High performing, reliable and innovative - Gelmatic are leading the way in the world of ice cream,
-                specialising in express blending technology while maintaining guaranteed high quality.
-              </p>
-              <p className="copy">
-                With Italian craftsmanship, specialised engineering and rapid, consistent performance, Gelmatic ice
-                cream machines are the investment you need for your business.
-              </p>
-              <Link href="/shop" className="btn">
-                Shop Now
-              </Link>
+              <GelmaticMark className="swirl" />
+              <div className="hero__text">
+                <h1 className="heading">Gelmatic - An Investment to Enhance Your Business</h1>
+                <p className="copy">
+                  High performing, reliable and innovative - Gelmatic are leading the way in the world of ice cream,
+                  specialising in express blending technology while maintaining guaranteed high quality.
+                </p>
+                <p className="copy">
+                  With Italian craftsmanship, specialised engineering and rapid, consistent performance, Gelmatic ice
+                  cream machines are the investment you need for your business.
+                </p>
+                <Link href="/shop" className="btn">
+                  Shop Now
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -94,9 +96,8 @@ export default function Home() {
               alt="Gelmatic soft serve machine with its touchscreen control panel"
               fill
               priority
-              sizes="(max-width: 960px) 100vw, 700px"
+              sizes="(max-width: 960px) 100vw, 50vw"
             />
-          </div>
           </div>
         </section>
 
