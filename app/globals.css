@@ -238,6 +238,17 @@ p {
   text-underline-offset: 0.2em;
 }
 
+.site-header__mail-icon {
+  display: none;
+  color: var(--foreground);
+}
+
+.site-header__mail-icon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
 .instagram {
   width: 34px;
   height: 34px;
@@ -563,10 +574,14 @@ p {
   padding: 5rem 0 4.5rem;
 }
 
+/* Same treatment as the hero swirl: 94% of the section's height, vertically
+   centred, starting at the container's left content edge */
 .trusted .swirl {
-  width: 44%;
-  left: var(--gutter);
-  top: -4.5rem;
+  height: 94%;
+  width: auto;
+  left: calc((100% - min(100%, var(--container))) / 2 + var(--gutter) + 0.5%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .trusted__copy,
@@ -676,8 +691,11 @@ p {
     justify-content: center;
   }
   .trusted .swirl {
+    height: auto;
     width: 90%;
-    left: -10%;
+    left: 5%;
+    top: 3rem;
+    transform: none;
   }
   .hero__inner {
     padding: 3.5rem 0;
@@ -720,21 +738,14 @@ p {
 }
 
 @media (max-width: 640px) {
-  .site-header__inner {
-    flex-wrap: wrap;
-    row-gap: 0;
-    padding-block: 0.6rem;
+  .site-header__email {
+    display: none;
+  }
+  .site-header__mail-icon {
+    display: block;
   }
   .site-header__contact {
-    display: contents;
-  }
-  .site-header__email {
-    order: 3;
-    flex-basis: 100%;
-    text-align: center;
-    font-size: 0.95rem;
-    letter-spacing: 0.06em;
-    padding-top: 0.4rem;
+    gap: 1rem;
   }
   .machines {
     padding: 4rem 0 5rem;

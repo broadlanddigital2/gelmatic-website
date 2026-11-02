@@ -25,3 +25,22 @@ export function Arrow({ direction = "right" }: { direction?: "left" | "right" })
     </svg>
   );
 }
+
+/** Envelope icon: used for the email link on phones, where the full address doesn't fit. */
+export function MailIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+      <path d="m3.5 6.5 8.5 6.5 8.5-6.5" />
+    </svg>
+  );
+}

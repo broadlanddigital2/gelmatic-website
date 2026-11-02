@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Arrow, GelmaticMark } from "@/components/Icons";
+import { Arrow, GelmaticMark, MailIcon } from "@/components/Icons";
 
 const MACHINES_URL = "https://icecreamvanspares.co.uk/gelmatic-machines";
 const PARTS_URL = "https://icecreamvanspares.co.uk/shop/gelmatic-machine-parts.html";
@@ -61,6 +61,9 @@ export default function Home() {
           <div className="site-header__contact">
             <a className="site-header__email" href="mailto:sales@gelmatic.co.uk">
               sales@gelmatic.co.uk
+            </a>
+            <a className="site-header__mail-icon" href="mailto:sales@gelmatic.co.uk" aria-label="Email sales@gelmatic.co.uk">
+              <MailIcon />
             </a>
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Gelmatic UK on Instagram">
               <Image src="/images/icon-instagram.png" alt="" width={44} height={44} className="instagram" />
@@ -199,8 +202,8 @@ export default function Home() {
 
         {/* ---------------- Trusted by ---------------- */}
         <section className="trusted">
+          <GelmaticMark className="swirl" />
           <div className="container trusted__inner">
-            <GelmaticMark className="swirl" />
             <div className="trusted__copy">
               <h2 className="heading">Trusted by Ice Cream Vans, Busy Parlours and Kiosks Throughout the UK</h2>
               <p className="copy">
