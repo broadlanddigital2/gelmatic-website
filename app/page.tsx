@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow, GelmaticMark, MailIcon } from "@/components/Icons";
+import SiteFooter from "@/components/SiteFooter";
 
 const MACHINES_URL = "https://icecreamvanspares.co.uk/gelmatic-machines";
 const PARTS_URL = "https://icecreamvanspares.co.uk/shop/gelmatic-machine-parts.html";
+// Pronto-Matic Direct Drive: the product isn't listed yet (trademark pending), so this card
+// points at the HC Easy 1 PM page for now. Swap in the Pronto-Matic product URL once it's live.
+const PRONTO_MATIC_URL = "https://icecreamvanspares.co.uk/gelmatic-machines/gelmatic-electric-hc-easy-1-pm-machine";
 
 const features = [
   { icon: "/images/icon-star.png", title: "Premium Quality", text: "Built in Italy, designed for professionals" },
@@ -25,7 +29,7 @@ const machines = [
     image: "/images/pronto-matic.webp",
     width: 700,
     height: 1050,
-    href: "https://icecreamvanspares.co.uk/gelmatic-machines/gelmatic-electric-hc-easy-1-pm-machine",
+    href: PRONTO_MATIC_URL,
   },
   {
     name: "Pronto Electric Machine",
@@ -75,22 +79,24 @@ export default function Home() {
       <main>
         {/* ---------------- Hero ---------------- */}
         <section className="hero">
-          <div className="container hero__grid">
+          {/* Text half lines up with the 1400px container; the image half runs to the page edge */}
           <div className="hero__content">
-            <GelmaticMark className="swirl" />
             <div className="hero__inner">
-              <h1 className="heading">Gelmatic - An Investment to Enhance Your Business</h1>
-              <p className="copy">
-                High performing, reliable and innovative - Gelmatic are leading the way in the world of ice cream,
-                specialising in express blending technology while maintaining guaranteed high quality.
-              </p>
-              <p className="copy">
-                With Italian craftsmanship, specialised engineering and rapid, consistent performance, Gelmatic ice
-                cream machines are the investment you need for your business.
-              </p>
-              <a href={MACHINES_URL} className="btn">
-                Shop Now
-              </a>
+              <GelmaticMark className="swirl" />
+              <div className="hero__text">
+                <h1 className="heading">Gelmatic - An Investment to Enhance Your Business</h1>
+                <p className="copy">
+                  High performing, reliable and innovative - Gelmatic are leading the way in the world of ice cream,
+                  specialising in express blending technology while maintaining guaranteed high quality.
+                </p>
+                <p className="copy">
+                  With Italian craftsmanship, specialised engineering and rapid, consistent performance, Gelmatic ice
+                  cream machines are the investment you need for your business.
+                </p>
+                <a href={MACHINES_URL} className="btn">
+                  Shop Now
+                </a>
+              </div>
             </div>
           </div>
 
@@ -100,9 +106,8 @@ export default function Home() {
               alt="Gelmatic soft serve machine with its touchscreen control panel"
               fill
               priority
-              sizes="(max-width: 960px) 100vw, 700px"
+              sizes="(max-width: 960px) 100vw, 50vw"
             />
-          </div>
           </div>
         </section>
 
@@ -234,6 +239,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <SiteFooter />
     </>
   );
 }

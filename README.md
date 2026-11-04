@@ -33,7 +33,8 @@ To go live later, add `gelmatic.co.uk` under the Worker's **Settings → Domains
 - `app/page.tsx` – the page (header, hero, feature strip, machines, parts, trusted-by)
 - `app/globals.css` – all styling, design tokens at the top in `:root`
 - `app/layout.tsx` – font + metadata
-- `components/Icons.tsx` – Gelmatic swirl mark and button arrows
+- `components/Icons.tsx` – Gelmatic swirl mark, button arrows, mail icon
+- `components/SiteFooter.tsx` – footer matching icecreamvanspares.co.uk
 - `public/images/` – photos and icons
 - `wrangler.jsonc` – Cloudflare config (serves the `out/` folder that `npm run build` produces)
 
@@ -55,5 +56,7 @@ and they're picked up automatically.
 
 ## Still to do
 
+- **Pronto-Matic Direct Drive** card links to the HC Easy 1 PM page for now (trademark pending). When the product is listed, change `PRONTO_MATIC_URL` at the top of `app/page.tsx`.
+
 - `e-pronto.jpg`, `hero-machine.jpg` and `van.jpg` are cropped from the design mockup: swap in full-resolution originals (same file names).
-- Link targets (`/shop`, `/machines`, `/parts`, machine pages) and the Instagram URL are placeholders.
+- The Instagram link is a placeholder (`https://www.instagram.com/`).
