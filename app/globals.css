@@ -649,6 +649,96 @@ p {
 }
 
 /* ------------------------------------------------------------------
+   Policy pages (privacy, cookies)
+   ------------------------------------------------------------------ */
+.policy {
+  padding-block: 4.5rem 5.5rem;
+}
+
+.policy__body {
+  max-width: 46rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.policy__body .heading {
+  margin-bottom: 0.75rem;
+}
+
+.policy__updated {
+  color: var(--grey);
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.policy__body h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.policy__body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.policy__body p,
+.policy__body ul {
+  margin: 0 0 1rem;
+}
+
+.policy__body ul {
+  padding-left: 1.25rem;
+}
+
+.policy__body li + li {
+  margin-top: 0.4rem;
+}
+
+.policy__body a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.policy__body a:hover {
+  color: var(--foreground-light);
+}
+
+.policy__table {
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+}
+
+.policy__table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: var(--white);
+}
+
+.policy__table th,
+.policy__table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #d9d6cc;
+}
+
+.policy__table th {
+  background: var(--foreground);
+  color: var(--white);
+  font-weight: 700;
+}
+
+/* ------------------------------------------------------------------
    Footer (matches icecreamvanspares.co.uk)
    ------------------------------------------------------------------ */
 .site-footer {
@@ -923,6 +1013,9 @@ p {
 }
 
 @media (max-width: 767px) {
+  .policy {
+    padding-block: 3rem 4rem;
+  }
   .site-footer__main {
     padding: 16px 16px 0;
     gap: 1rem;

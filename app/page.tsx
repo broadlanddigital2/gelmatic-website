@@ -1,13 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Arrow, GelmaticMark, MailIcon } from "@/components/Icons";
+import { Arrow, GelmaticMark } from "@/components/Icons";
 import SiteFooter from "@/components/SiteFooter";
-
-const MACHINES_URL = "https://icecreamvanspares.co.uk/gelmatic-machines";
-const PARTS_URL = "https://icecreamvanspares.co.uk/shop/gelmatic-machine-parts.html";
-// Pronto-Matic Direct Drive: the product isn't listed yet (trademark pending), so this card
-// points at the HC Easy 1 PM page for now. Swap in the Pronto-Matic product URL once it's live.
-const PRONTO_MATIC_URL = "https://icecreamvanspares.co.uk/gelmatic-machines/gelmatic-electric-hc-easy-1-pm-machine";
+import SiteHeader from "@/components/SiteHeader";
+import { E_PRONTO_URL, MACHINES_URL, PARTS_URL, PRONTO_ELECTRIC_URL, PRONTO_MATIC_URL } from "@/lib/links";
 
 const features = [
   { icon: "/images/icon-star.png", title: "Premium Quality", text: "Built in Italy, designed for professionals" },
@@ -22,7 +17,7 @@ const machines = [
     image: "/images/e-pronto.jpg",
     width: 248,
     height: 382,
-    href: "https://icecreamvanspares.co.uk/gelmatic-machines/gelmatic-e-pronto-electric-van-machine",
+    href: E_PRONTO_URL,
   },
   {
     name: "Pronto - Matic Direct Drive Machine",
@@ -36,7 +31,7 @@ const machines = [
     image: "/images/pronto-electric.webp",
     width: 700,
     height: 1050,
-    href: "https://icecreamvanspares.co.uk/gelmatic-machines/gelmatic-pronto-electric-machine",
+    href: PRONTO_ELECTRIC_URL,
   },
 ];
 
@@ -52,29 +47,7 @@ function CheckItem({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <>
-      {/* ---------------- Header ---------------- */}
-      <header className="site-header">
-        <div className="container site-header__inner">
-          <Link href="/" className="logo" aria-label="Gelmatic UK home">
-            <GelmaticMark className="logo__mark" />
-            <span className="logo__word">
-              GELMATIC<span className="logo__tld">.CO.UK</span>
-            </span>
-          </Link>
-
-          <div className="site-header__contact">
-            <a className="site-header__email" href="mailto:sales@gelmatic.co.uk">
-              sales@gelmatic.co.uk
-            </a>
-            <a className="site-header__mail-icon" href="mailto:sales@gelmatic.co.uk" aria-label="Email sales@gelmatic.co.uk">
-              <MailIcon />
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Gelmatic UK on Instagram">
-              <Image src="/images/icon-instagram.png" alt="" width={44} height={44} className="instagram" />
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         {/* ---------------- Hero ---------------- */}
