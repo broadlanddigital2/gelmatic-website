@@ -287,8 +287,9 @@ p {
 .hero__inner .swirl {
   height: 94%;
   width: auto;
-  max-width: calc(100% - var(--gutter));
-  left: calc(var(--gutter) + 0.5%);
+  /* Sits slightly left of the text column and stops ~1 gutter short of the hero image */
+  max-width: calc(100% - var(--gutter) * 1.5);
+  left: calc(var(--gutter) / 2);
   top: 50%;
   transform: translateY(-50%);
 }

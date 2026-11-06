@@ -20,7 +20,7 @@ const machines = [
     href: E_PRONTO_URL,
   },
   {
-    name: "Pronto - Matic Direct Drive Machine",
+    name: "Coming Soon: Direct Drive Machine",
     image: "/images/pronto-matic.webp",
     width: 700,
     height: 1050,

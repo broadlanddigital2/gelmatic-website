@@ -20,7 +20,7 @@ import {
 
 const machines = [
   { label: "e-Pronto Electric Van Machine", href: E_PRONTO_URL },
-  { label: "Pronto-Matic Direct Drive Machine", href: PRONTO_MATIC_URL },
+  { label: "Coming Soon: Direct Drive Machine", href: PRONTO_MATIC_URL },
   { label: "Pronto Electric Machine", href: PRONTO_ELECTRIC_URL },
   { label: "View All Gelmatic Machines", href: MACHINES_URL },
 ];
