@@ -985,14 +985,38 @@ p {
   .feature__text {
     font-size: 0.9rem;
   }
-  .parts__brand-word {
-    display: none;
-  }
+  /* Phones: keep the swirl, web address and ticks, smaller, and drop the photo
+     below them. !important beats next/image's inline fill positioning. */
   .parts__card {
-    aspect-ratio: 4 / 3.4;
+    aspect-ratio: 4 / 3.9;
+  }
+  .parts__card > img {
+    left: 4% !important;
+    top: 36% !important;
+    width: 92% !important;
+    height: 60% !important;
+  }
+  .parts__brand {
+    top: 5.5%;
+    left: 5%;
+    gap: 0.4rem;
+  }
+  .parts__brand .gm-swirl {
+    width: 46px;
+  }
+  .parts__brand-word {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
   }
   .parts__checks {
-    display: none;
+    top: 7%;
+    right: 5%;
+    gap: 0.35rem;
+    font-size: 0.74rem;
+  }
+  .parts__checks .check img {
+    width: 14px;
+    height: 14px;
   }
   .btn {
     width: 100%;
