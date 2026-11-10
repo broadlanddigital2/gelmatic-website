@@ -985,20 +985,23 @@ p {
   .feature__text {
     font-size: 0.9rem;
   }
-  /* Phones: keep the swirl, web address and ticks, smaller, and drop the photo
-     below them. !important beats next/image's inline fill positioning. */
+  /* Phones: swirl + web address and ticks in a row, photo underneath in normal
+     flow (no absolute positioning or aspect-ratio, which some phone browsers
+     handle badly). !important beats next/image's inline fill styles. */
   .parts__card {
-    aspect-ratio: 4 / 3.9;
+    aspect-ratio: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.25rem 1rem;
   }
-  .parts__card > img {
-    left: 4% !important;
-    top: 36% !important;
-    width: 92% !important;
-    height: 60% !important;
+  .parts__brand,
+  .parts__checks {
+    position: static;
   }
   .parts__brand {
-    top: 5.5%;
-    left: 5%;
     gap: 0.4rem;
   }
   .parts__brand .gm-swirl {
@@ -1009,14 +1012,22 @@ p {
     letter-spacing: 0.08em;
   }
   .parts__checks {
-    top: 7%;
-    right: 5%;
     gap: 0.35rem;
     font-size: 0.74rem;
+    padding-top: 0.3rem;
   }
   .parts__checks .check img {
     width: 14px;
     height: 14px;
+  }
+  .parts__card > img {
+    position: static !important;
+    order: 3;
+    flex: 0 0 100%;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 260px;
+    object-fit: contain;
   }
   .btn {
     width: 100%;
