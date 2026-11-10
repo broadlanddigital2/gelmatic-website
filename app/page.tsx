@@ -144,6 +144,7 @@ export default function Home() {
                 alt="Genuine Gelmatic spare parts: gears, drive shaft, tap handle, capacitor and seals"
                 fill
                 sizes="(max-width: 960px) 100vw, 50vw"
+                loading="eager"
               />
               <div className="parts__brand" aria-hidden="true">
                 <GelmaticMark />
