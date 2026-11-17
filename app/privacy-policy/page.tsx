@@ -6,6 +6,7 @@ import { ADDRESS, CS_SITE_URL, SALES_EMAIL } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Privacy Policy | Gelmatic UK",
   description: "How gelmatic.co.uk handles your personal information.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 export default function PrivacyPolicy() {

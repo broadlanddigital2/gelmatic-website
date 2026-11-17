@@ -6,6 +6,7 @@ import { CS_SITE_URL, SALES_EMAIL } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Cookies Policy | Gelmatic UK",
   description: "Cookies and similar technologies used on gelmatic.co.uk.",
+  alternates: { canonical: "/cookies-policy" },
 };
 
 export default function CookiesPolicy() {

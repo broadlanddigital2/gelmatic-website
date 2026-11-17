@@ -13,6 +13,8 @@ const franklin = Libre_Franklin({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gelmatic.co.uk"),
+  alternates: { canonical: "/" },
   title: "Gelmatic UK | Official UK Partner, Distributor & Spares Supplier",
   description:
     "Official UK distributor of Gelmatic Italy soft serve ice cream machines. Express blending technology, genuine parts, fast UK delivery and expert advice.",
