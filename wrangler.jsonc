@@ -2,9 +2,12 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "gelmatic-website",
   "compatibility_date": "2026-10-01",
-  // Static site: Cloudflare serves the Next.js export in ./out directly, no Worker code needed.
+  // Static site (Next.js export in ./out) behind a tiny Worker that redirects www → root.
+  "main": "worker.js",
   "assets": {
     "directory": "./out/",
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   },
