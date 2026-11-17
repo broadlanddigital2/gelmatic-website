@@ -8,8 +8,11 @@
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   },
-  "observability": { "enabled": true }
-  // Dev address: https://gelmatic-website.justin-b8f.workers.dev
-  // Live domain: attach gelmatic.co.uk + www under Settings → Domains & Routes → Custom domain
-  // (adding them here as routes failed the Workers Build: an old DNS record exists and/or the build token can't edit DNS).
+  "observability": { "enabled": true },
+  // Live domains: Cloudflare creates the DNS records and certificates on deploy.
+  "routes": [
+    { "pattern": "gelmatic.co.uk", "custom_domain": true },
+    { "pattern": "www.gelmatic.co.uk", "custom_domain": true }
+  ]
+  // Dev address (still on): https://gelmatic-website.justin-b8f.workers.dev
 }
